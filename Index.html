@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@600&display=swap" rel="stylesheet">
+ 
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!--Links-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - Yummy's Cloud Kitchen</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="nav-first-box">
+                <img src="img/icons8-codechef-96.png" alt="">
+                <div class="navgreetings">
+                    <h3>Yummy's</h3>
+                    <h5>Cloud Kitchen</h5>
+                </div>
+                <img id="bellicon" src="img/icons8-bell-96.png" alt="">
+            </div>
+            
+            <div class="nav-second-box">
+                <div class="search-box">
+                    <img src="img/icons8-search-96.png" alt="">
+                    <input type="text" placeholder="Search Food Categories">
+                </div>
+                <img class="filter-icon" src="img/icons8-filter-96.png" alt="">
+            </div>
+        </div>
+    </nav>
+
+    <div class="slideshow-container">
+        
+        <div class="hero-section fade">
+            <img src="img/banner1.png" alt="">
+            
+        </div>
+        
+        <div class="hero-section fade">
+            <img src="img/banner2.png" alt="">
+        </div>
+        
+        <div class="hero-section fade">
+            <img src="img/banner3.png" alt="">
+        </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+
+        <div class="food-categories-section">
+            <div class="header">
+                <h4>Food Categories</h4>
+                <h4 id="see-all">See All</h4>
+            </div>
+            <div class="wrapper">
+                <div class="icon"><i id="left" class="fa-solid fa-angle-left"></i></div>
+                <ul class="tabs-box">
+                  <li class="tab">
+                    <img src="img/bacon-chicken-pizza-png.png" alt="">
+                    <p>Pizza</p>
+                  </li>
+                  <li class="tab active">
+                    <img src="img/chrole.png" alt="">
+                    <p>Role</p>
+                  </li>
+                  <li class="tab">
+                    <img src="img/burger.png" alt="">
+                    <p>Burger</p>
+                  </li>
+                  <li class="tab">
+                    <img src="img/fries.png" alt="">
+                    <p>French Fries</p>
+                  </li>
+                  <li class="tab">
+                    <img src="img/combo.png" alt="">
+                    <p>Combo</p> 
+                  </li>
+                  
+                </ul>
+                <div class="icon"><i id="right" class="fa-solid fa-angle-right"></i></div>
+              </div>
+        </div>
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("hero-section");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2500); // Change image every 2 seconds
+            }
+
+
+
+            const tabsBox = document.querySelector(".tabs-box"),
+allTabs = tabsBox.querySelectorAll(".tab"),
+arrowIcons = document.querySelectorAll(".icon i");
+let isDragging = false;
+const handleIcons = (scrollVal) => {
+    let maxScrollableWidth = tabsBox.scrollWidth - tabsBox.clientWidth;
+    arrowIcons[0].parentElement.style.display = scrollVal <= 0 ? "none" : "flex";
+    arrowIcons[1].parentElement.style.display = maxScrollableWidth - scrollVal <= 1 ? "none" : "flex";
+}
+arrowIcons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        // if clicked icon is left, reduce 350 from tabsBox scrollLeft else add
+        let scrollWidth = tabsBox.scrollLeft += icon.id === "left" ? -340 : 340;
+        handleIcons(scrollWidth);
+    });
+});
+allTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+        tabsBox.querySelector(".active").classList.remove("active");
+        tab.classList.add("active");
+    });
+});
+const dragging = (e) => {
+    if(!isDragging) return;
+    tabsBox.classList.add("dragging");
+    tabsBox.scrollLeft -= e.movementX;
+    handleIcons(tabsBox.scrollLeft)
+}
+const dragStop = () => {
+    isDragging = false;
+    tabsBox.classList.remove("dragging");
+}
+tabsBox.addEventListener("mousedown", () => isDragging = true);
+tabsBox.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+            </script>
+
+
+
+</body>
+
+</html>
