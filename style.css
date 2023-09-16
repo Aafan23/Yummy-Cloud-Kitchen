@@ -225,18 +225,19 @@ img {
     }
     .food-header{
         width: 100%;
-        height: 15%;
+        height: 3%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0vw 4vw;
+       
     }
     .food-header p{
-        font-size: 3.5vw;
-    font-family: 'Dosis', sans-serif;
-    font-weight: 800;
-    color: #414449;
-    letter-spacing: 0.1vw;
+        font-size: 4vw;
+        font-family: 'Dosis', sans-serif;
+        font-weight: 800;
+        color: #414449;
+        letter-spacing: 0.1vw;
     }
     #seeAll{
         color: #ff9136;
@@ -267,7 +268,7 @@ img {
      
     }
     .box p{
-       font-size: 3vw;
+       font-size: 3.2vw;
     padding-top: 1vw;
         text-align: center;
         font-family: 'Merienda', cursive;
@@ -279,4 +280,63 @@ img {
         color: #3085d6;
     }
   
+
+
+
+
+
+
+
+
+
+.slider-container {
+   
+    max-width: 600px;
+    margin: 0 auto;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Keep cards in a single line */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+    -ms-overflow-style: none; /* Hide IE/Edge scrollbar */
+    scrollbar-width: none; /* Hide Firefox scrollbar */
+}
+
+.card-slider {
+    display: inline-flex;
+    padding-top: 5vw;
+}
+
+.card {
+    flex: 0 0 calc(25% - 20px); /* Show 4 cards at a time with some spacing */
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 6px 11px;
+    text-align: center;
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 23vw;
+
+}
+
+/* Hide the default scrollbar */
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+.card-food-box{
+    width: 26vw;
+    height: 26vw;
+    /* border: 1px solid red; */
+    position: relative;
+    bottom: 8vw;
+    border-radius: 50%;
+    background-image: url(img/p1.png);
+    background-size: 35vw;
+    background-position: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 6px 11px;
+}
+
+
 }
