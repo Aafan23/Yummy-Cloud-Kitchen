@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@600&display=swap" rel="stylesheet">
+ <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <!--Links-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - Yummy's Cloud Kitchen</title>
+</head>
+
+<body>
+<div class="navbar">
+<div class="nav-box1">
+    <img src="img/icons8-movie-96.png" alt="">
+    <h3>Azad Theater</h3>
+    <img src="img/icons8-user-profile-96.png" alt="">
+</div>
+<div class="nav-box2">
+    <div class="box">
+        <input type="text" placeholder="Search Movie">
+    </div>
+    
+</div>
+</div>
+
+
+
+
+
+
+
+
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("hero-section");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2500); // Change image every 2 seconds
+            }
+
+
+
+
+
+
+function scrollCards(direction) {
+    if (isAnimating) return;
+
+    const cardWidth = document.querySelector('.card').offsetWidth;
+    const cardsInView = 4;
+    const currentIndex = Math.floor(cardSlider.scrollLeft / cardWidth);
+    let targetIndex;
+
+    if (direction === 'next') {
+        targetIndex = currentIndex + cardsInView;
+    } else if (direction === 'prev') {
+        targetIndex = currentIndex - cardsInView;
+    } else {
+        targetIndex = currentIndex;
+    }
+
+    const targetScrollX = targetIndex * cardWidth;
+    const startScrollX = cardSlider.scrollLeft;
+    const distance = targetScrollX - startScrollX;
+    const duration = 300; // Adjust the duration as needed
+
+    let startTime;
+
+    function animateScroll(time) {
+        if (!startTime) startTime = time;
+
+        const progress = (time - startTime) / duration;
+
+        if (progress < 1) {
+            cardSlider.scrollLeft = startScrollX + distance * easeInOutCubic(progress);
+            scrollAnimation = requestAnimationFrame(animateScroll);
+            isAnimating = true;
+        } else {
+            cardSlider.scrollLeft = targetScrollX;
+            isAnimating = false;
+        }
+    }
+
+    function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+    }
+
+    scrollAnimation = requestAnimationFrame(animateScroll);
+}
+
+  
+
+            </script>
+
+
+
+</body>
+
+</html>
