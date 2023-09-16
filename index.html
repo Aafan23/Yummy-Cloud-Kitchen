@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@600&display=swap" rel="stylesheet">
- 
+ <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700;800&display=swap" rel="stylesheet">
     <!--Links-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -88,16 +89,38 @@
             </div>
         </div>
 
+        <div class="food-header">
+            <p>Food Categories</p>
+            <p id="seeAll">See All</p>
+        </div>
+        <div class="slider-container">
+        
+            <div class="card-slider">
+                <div class="card">
+                    <div class="card-food-box">
 
-     
-
-
-
-
-
-
-
-
+                    </div>
+                    Maxican Pizza</div>
+                <div class="card">
+                    <div class="card-food-box">
+                        
+                    </div>Card 2</div>
+                <div class="card">
+                    <div class="card-food-box">
+                        
+                    </div>Card 3</div>
+                <div class="card">
+                    <div class="card-food-box">
+                        
+                    </div>Card 4</div>
+                <div class="card">
+                    <div class="card-food-box">
+                        
+                    </div>Card 5</div>
+                <div class="card">Card 6</div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
 
 
 
@@ -127,7 +150,86 @@
 
 
 
- 
+
+
+            const cardSlider = document.querySelector('.card-slider');
+let touchStartX = 0;
+let touchEndX = 0;
+let isAnimating = false;
+
+cardSlider.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    cancelAnimationFrame(scrollAnimation);
+    isAnimating = false;
+});
+
+cardSlider.addEventListener('touchmove', (e) => {
+    touchEndX = e.touches[0].clientX;
+});
+
+let scrollAnimation;
+
+cardSlider.addEventListener('touchend', () => {
+    const deltaX = touchStartX - touchEndX;
+    const threshold = 50; // Adjust the threshold for sensitivity
+
+    if (deltaX > threshold) {
+        scrollCards('next');
+    } else if (deltaX < -threshold) {
+        scrollCards('prev');
+    } else {
+        // Snap back to the current card if not enough swipe distance
+        scrollCards('current');
+    }
+});
+
+function scrollCards(direction) {
+    if (isAnimating) return;
+
+    const cardWidth = document.querySelector('.card').offsetWidth;
+    const cardsInView = 4;
+    const currentIndex = Math.floor(cardSlider.scrollLeft / cardWidth);
+    let targetIndex;
+
+    if (direction === 'next') {
+        targetIndex = currentIndex + cardsInView;
+    } else if (direction === 'prev') {
+        targetIndex = currentIndex - cardsInView;
+    } else {
+        targetIndex = currentIndex;
+    }
+
+    const targetScrollX = targetIndex * cardWidth;
+    const startScrollX = cardSlider.scrollLeft;
+    const distance = targetScrollX - startScrollX;
+    const duration = 300; // Adjust the duration as needed
+
+    let startTime;
+
+    function animateScroll(time) {
+        if (!startTime) startTime = time;
+
+        const progress = (time - startTime) / duration;
+
+        if (progress < 1) {
+            cardSlider.scrollLeft = startScrollX + distance * easeInOutCubic(progress);
+            scrollAnimation = requestAnimationFrame(animateScroll);
+            isAnimating = true;
+        } else {
+            cardSlider.scrollLeft = targetScrollX;
+            isAnimating = false;
+        }
+    }
+
+    function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+    }
+
+    scrollAnimation = requestAnimationFrame(animateScroll);
+}
+
+  
+
             </script>
 
 
