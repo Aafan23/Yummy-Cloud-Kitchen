@@ -233,9 +233,10 @@ img {
     }
     .food-header p{
         font-size: 3.5vw;
-        font-family: 'Dosis', sans-serif;
-        font-weight: 600;
-     color: #414449;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 800;
+    color: #414449;
+    letter-spacing: 0.1vw;
     }
     #seeAll{
         color: #ff9136;
