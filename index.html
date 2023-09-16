@@ -62,40 +62,31 @@
           <span class="dot"></span> 
         </div>
 
-        <div class="food-categories-section">
-            <div class="header">
-                <h4>Food Categories</h4>
-                <h4 id="see-all">See All</h4>
+        <div class="foodCatergories-Section">
+            <div class="food-header">
+                <p>Food Categories</p>
+                <p id="seeAll">See All</p>
             </div>
-            <div class="wrapper">
-                <div class="icon"><i id="left" class="fa-solid fa-angle-left"></i></div>
-                <ul class="tabs-box">
-                  <li class="tab">
-                    <img src="img/bacon-chicken-pizza-png.png" alt="">
-                    <p>Pizza</p>
-                  </li>
-                  <li class="tab active">
-                    <img src="img/chrole.png" alt="">
-                    <p>Role</p>
-                  </li>
-                  <li class="tab">
-                    <img src="img/burger.png" alt="">
-                    <p>Burger</p>
-                  </li>
-                  <li class="tab">
-                    <img src="img/fries.png" alt="">
-                    <p>French Fries</p>
-                  </li>
-                  <li class="tab">
-                    <img src="img/combo.png" alt="">
-                    <p>Combo</p> 
-                  </li>
-                  
-                </ul>
-                <div class="icon"><i id="right" class="fa-solid fa-angle-right"></i></div>
-              </div>
-        </div>
+            <div class="food-box">
+<div class="box">
+    <img src="img/bacon-chicken-pizza-png.png" alt="">
+    <p>Pizza</p>
+   
+</div>
+<div class="box">
+    <img src="img/burger.png" alt="">
+    <p>Burger</p>
+    
+</div>
+<div class="box">
+    <img src="img/combo.png" alt="">
+    <p>Combo</p>
+    <p id="p-off">up to 60% off</p>
+</div>
 
+
+            </div>
+        </div>
 
 
      
@@ -136,41 +127,7 @@
 
 
 
-            const tabsBox = document.querySelector(".tabs-box"),
-allTabs = tabsBox.querySelectorAll(".tab"),
-arrowIcons = document.querySelectorAll(".icon i");
-let isDragging = false;
-const handleIcons = (scrollVal) => {
-    let maxScrollableWidth = tabsBox.scrollWidth - tabsBox.clientWidth;
-    arrowIcons[0].parentElement.style.display = scrollVal <= 0 ? "none" : "flex";
-    arrowIcons[1].parentElement.style.display = maxScrollableWidth - scrollVal <= 1 ? "none" : "flex";
-}
-arrowIcons.forEach(icon => {
-    icon.addEventListener("click", () => {
-        // if clicked icon is left, reduce 350 from tabsBox scrollLeft else add
-        let scrollWidth = tabsBox.scrollLeft += icon.id === "left" ? -340 : 340;
-        handleIcons(scrollWidth);
-    });
-});
-allTabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-        tabsBox.querySelector(".active").classList.remove("active");
-        tab.classList.add("active");
-    });
-});
-const dragging = (e) => {
-    if(!isDragging) return;
-    tabsBox.classList.add("dragging");
-    tabsBox.scrollLeft -= e.movementX;
-    handleIcons(tabsBox.scrollLeft)
-}
-const dragStop = () => {
-    isDragging = false;
-    tabsBox.classList.remove("dragging");
-}
-tabsBox.addEventListener("mousedown", () => isDragging = true);
-tabsBox.addEventListener("mousemove", dragging);
-document.addEventListener("mouseup", dragStop);
+ 
             </script>
 
 
