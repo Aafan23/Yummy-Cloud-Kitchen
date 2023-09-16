@@ -89,83 +89,7 @@ img {
 }
 
 
-.wrapper {
-    padding: 4vw;
-    position: relative;
-    overflow-x: hidden;
-    max-width: 1000px;
-    background: #fff;
-    border-radius: 13px;
-  }
-  .wrapper .icon {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 120px;
-    display: flex;
-    align-items: center;
-  }
-  .icon:first-child {
-    left: 0;
-    display: none;
-  
-  }
-  .icon:last-child {
-    right: 0;
-    justify-content: flex-end;
-    
-  }
-  .icon i {
-    width: 55px;
-    height: 55px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    text-align: center;
-    line-height: 55px;
-    border-radius: 50%;
-  }
-  .icon i:hover {
-    background: #efedfb;
-  }
-  .icon:first-child i {
-    margin-left: 15px;
-  } 
-  .icon:last-child i {
-    margin-right: 15px;
-  } 
-  .wrapper .tabs-box {
-    display: flex;
-    gap: 12px;
-    list-style: none;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
-  .tabs-box.dragging {
-    scroll-behavior: auto;
-    cursor: grab;
-  }
-  .tabs-box .tab {
-    cursor: pointer;
-    font-size: 1.18rem;
-    white-space: nowrap;
-    background: #f5f4fde6;
-    padding: 6px 11px;
-    border-radius: 13px;
-    height: 17vw;
-    width: 20.5vw;
-  }
-  .tabs-box .tab:hover{
-    background: #efedfb;
-  }
-  .tabs-box.dragging .tab {
-    user-select: none;
-    pointer-events: none;
-  }
-  .tabs-box .tab.active{
-    color: #fff;
-    background: #5372f080;
-    border-color: transparent;
-  }
+
 
 @media (max-width:768px) {
     nav{
@@ -215,7 +139,7 @@ img {
         border-radius: 100%;
         padding: 1.3vw;
         background-color: rgba(255, 79, 79, 0.139);
-        margin-left: 30vw;
+        margin-left: 33vw;
         margin-top: 1.5vw;
     }
     .nav-second-box{
@@ -228,8 +152,8 @@ img {
        
     }
     .search-box{
-        width: 81%;
-        height: 70%;
+        width: 83%;
+        height: 85%;
        border-radius: 2vw;
         display: flex;
         align-items: center;
@@ -255,8 +179,8 @@ img {
        letter-spacing: 0.2vw;
     }
     .filter-icon{
-        width: 9vw;
-        height: 9vw;
+        width: 10vw;
+        height: 10vw;
         margin-left: 1vw;
     }
     .food-categories-section{
@@ -295,4 +219,63 @@ img {
     font-family: 'Merienda', cursive;
     overflow: hidden;
     }
+    .foodCatergories-Section{
+        width: 100%;
+        height: 50vw;
+    }
+    .food-header{
+        width: 100%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0vw 4vw;
+    }
+    .food-header p{
+        font-size: 3.5vw;
+        font-family: 'Dosis', sans-serif;
+        font-weight: 600;
+     color: #414449;
+    }
+    #seeAll{
+        color: #ff9136;
+    }
+    .food-box{
+        width: 100%;
+        height: 85%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1vw 4vw;
+    }
+    .box{
+        width: 29vw;
+        height: 33vw;
+       box-shadow: rgba(149, 157, 165, 0.2) 0px 6px 11px;
+        border-radius: 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: white;
+    }
+    .box img{
+        width: 25vw;
+        height: 17vw;
+        
+     
+    }
+    .box p{
+       font-size: 4vw;
+    padding-top: 1vw;
+        text-align: center;
+        font-family: 'Merienda', cursive;
+        color: #414449;
+    }
+    #p-off{
+        padding: 0;
+        font-size: 2.5vw;
+        color: #3085d6;
+    }
+  
 }
