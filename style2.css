@@ -207,7 +207,7 @@ img {
     }
     .show{
         width: 100%;
-        height: 100vw;
+        height: 75vw;
     }
     .show-header{
         width: 100%;
@@ -234,7 +234,6 @@ height: 7vw;
         display: flex;
         flex-direction: column-reverse;
         margin-top: 3vw;
-        margin-left: 3vw;
         width: 37vw;
         height: 48vw;
         background-image: url('img/jawan-poster-3.jpg');
@@ -270,5 +269,111 @@ text-align: center;
     height: 2.5vw;
    
    }
+   .show-box{
+    width: 43vw;
+    height: 63vw;
+    border: 1px solid #00000012;
+    margin-left: 5vw;
+    display: flex;
+    justify-content: center;
+    border-radius: 6vw;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 1px 10px;
+   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .slider-container {
+   
+    max-width: 600px;
+    margin: 0 auto;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Keep cards in a single line */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+    -ms-overflow-style: none; /* Hide IE/Edge scrollbar */
+    scrollbar-width: none; /* Hide Firefox scrollbar */
+}
+
+.card-slider {
+    display: inline-flex;
+}
+
+.card {
+    flex: 0 0 calc(25% - 20px); /* Show 4 cards at a time with some spacing */
+    background-color: #fff;
+    padding: 6px;
+    margin: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 6px 11px;
+    text-align: center;
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 23vw;
+    border-radius: 4vw;
+
+}
+
+/* Hide the default scrollbar */
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+.upcoming{
+    width: 100%;
+    height: 10vw;
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+}
+.upcoming p{
+    color: black;
+    font-size: 4.5vw;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    letter-spacing: 0.2vw;
+    
+        }
+        .upcoming img{
+            margin-left: 2vw;
+    width: 7vw;
+    height: 7vw;
+        }
+
+
+        .card-food-box{
+            border-radius: 3vw;
+            width: 100%;
+            height: 100%;
+            background-image: url('img/jawan-poster-3.jpg');
+            background-size: cover;
+        }
+        #food-2{
+            background-image: url('img/Tiger_3_poster.jpg');
+        }
+        #food-3{
+            background-image: url('img/salaar.jpg');
+        }
+        #food-4{
+            background-image: url('img/archies.jpg');
+        }
+        #food-5{
+            background-image: url('img/yodha.jpg');
+        }
+      
 }
