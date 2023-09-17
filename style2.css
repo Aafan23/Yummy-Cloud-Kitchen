@@ -219,6 +219,11 @@ font-family: 'Dosis', sans-serif;
 font-weight: 600;
 letter-spacing: 0.1vw;
     }
+    .show-header img{
+        margin-left: 2vw;
+width: 7vw;
+height: 7vw;
+    }
     .today-show{
         display: flex;
         flex-direction: column-reverse;
