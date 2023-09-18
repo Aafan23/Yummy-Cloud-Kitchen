@@ -126,7 +126,7 @@ img {
     .nav-box1 h3{
    font-size: 7.2vw;
    color: whitesmoke;
-   font-family: 'Dosis', sans-serif;
+   font-family: 'Poppins', sans-serif;
    letter-spacing: 0.1vw;
     }
     .box{
@@ -185,10 +185,10 @@ img {
     }
     .home-titles p{
         display: flex;
-        background-color: rgba(173, 216, 230, 0.297);
+      
         align-items: center;
         padding: 3vw;
-     font-size: 4vw;
+     font-size: 3.5vw;
      color: rgba(0, 0, 0, 0.739);
    
      width: auto;
@@ -429,5 +429,20 @@ font-family: 'Merienda', cursive;
       .show-details img{
 width: 20vw;
 
+      }
+      .title-box{
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 15vw;
+        height: 17vw;
+       
+      }
+      .title-box img{
+        width: 10vw;
+      
+        
       }
 }
