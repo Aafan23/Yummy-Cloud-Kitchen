@@ -616,4 +616,18 @@ width: 6.5vw;
         color: #c0c4e5a3;
         font-weight: 600;
       }
+
+      #watch-trailer{
+        opacity: 0.5;
+        margin-left: 7vw;
+        color: #ffc107;
+        padding: 2vw;
+        font-size: 2vw;
+        border: 1.5px solid #ffc107;
+        border-radius: 4vw;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        position: relative;
+        top: 1vw;
+      }
 }
