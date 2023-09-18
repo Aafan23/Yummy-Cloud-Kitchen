@@ -10,7 +10,7 @@ html,
 body {
     height: 100%;
     width: 100%;
-    background-color: whitesmoke;
+    background-color: #e5e2e214;
 }
 .hero-section {
     width: 100%;
@@ -190,7 +190,7 @@ img {
         padding: 3vw;
      font-size: 4vw;
      color: rgba(0, 0, 0, 0.739);
-     box-shadow: rgba(149, 157, 165, 0.2) 0px 1px 11px;
+   
      width: auto;
      height: 8vw;
      border-radius: 5vw;
@@ -248,9 +248,9 @@ height: 7vw;
     height: 10vw;
    }
    .show-name p{
-font-size: 4vw;
+font-size: 3.3vw;
 color: black;
-font-family: 'Dosis', sans-serif;
+font-family: 'Poppins', sans-serif;
 font-weight: 600;
 letter-spacing: 0.2vw;
 text-align: center;
@@ -383,28 +383,32 @@ text-align: center;
         .show-details{
             display: flex;
             align-items: center;
-            padding-top: 12vw;
+            padding-top: 5vw;
             flex-direction: column;
             width: 50vw;
             height: 70vw;
         }
         .show-details p{
+            
             color: #f6b01f;
-font-size: 4vw;
+font-size: 2.5vw;
 font-family: 'Merienda', cursive;
         }
         .show-details h3{
-            color: #1c1a29;
+            color: #13183ded;
             padding-top: 2vw;
-            font-size: 6.5vw;
-            font-family: 'Lora', serif;
+            font-size: 6vw;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
             text-transform: uppercase;
-            text-shadow: 1px 3px 3px rgba(0,0,0,0.3), 0px -4px 10px rgba(255,255,255,0.3);
+            
                     }
+            
       #time{
+        opacity: 0.5;
         color: #1c1a29;
         padding-top: 2vw;
-        font-size: 3vw;
+        font-size: 2.5vw;
       }
       button{
         margin-top: 3vw;
@@ -413,13 +417,17 @@ font-family: 'Merienda', cursive;
         border-radius: 3vw;
         border: none;
         outline: none;
-        background-color: #f6b01f;
+        background-color: #FF9D1B;
         color: white;
         font-size: 3.5vw;
         font-family: 'Lora', serif;
         letter-spacing: 0.1vw;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 1px 11px;
         font-weight: 600;
+
+      }
+      .show-details img{
+width: 20vw;
 
       }
 }
