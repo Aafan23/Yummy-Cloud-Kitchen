@@ -145,10 +145,9 @@ img {
         outline: none;
         border: none;
         text-align:left;
-        font-size: 4vw;
+        font-size: 3vw;
         color: white;
-        font-family: 'Dosis', sans-serif;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 6px 11px;
+        font-family: 'Poppins', sans-serif;
         background-color: transparent;
         border-top-left-radius: 0vw;
         border-bottom-left-radius: 0vw;
@@ -158,14 +157,14 @@ img {
       
     }
     .box img{
-        width: 7vw;
+        width: 6vw;
         height: auto;
         margin-left: 3vw;
         opacity: 1;
       
     }
     #mic{
-        width: 6vw;
+        width: 5vw;
         height: auto;
         margin-left: 0vw;
         position: relative;
@@ -188,15 +187,15 @@ img {
       
         align-items: center;
         padding: 3vw;
-     font-size: 3.5vw;
+     font-size: 3vw;
      color: rgba(0, 0, 0, 0.739);
    
      width: auto;
      height: 8vw;
      border-radius: 5vw;
-     font-weight: 600;
+    
    
-     font-family: 'Dosis', sans-serif;
+     font-family: 'Poppins', sans-serif;
     }
     .home-titles a{
         text-decoration: none;
@@ -350,9 +349,9 @@ text-align: center;
 }
 .upcoming p{
     color: black;
-    font-size: 4.5vw;
-    font-family: 'Lora', serif;
-    font-weight: 600;
+    font-size: 4vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
     letter-spacing: 0.2vw;
     
         }
@@ -452,5 +451,169 @@ width: 20vw;
         width: 12vw;
       
         
+      }
+      .location{
+        width: 100%;
+        height: 50vw;
+        display: flex;
+  justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .location-txt{
+        width: 100%;
+        height: 10vw;
+
+        display: flex;
+        align-items: center;
+        padding-left: 4.5vw;
+      }
+      .location p{
+        margin-top: 4vw;
+        color: black;
+        font-size: 4vw;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.2vw;
+
+      }
+      iframe{
+        border-top-right-radius: 3vw;
+        border-bottom-right-radius: 3vw;
+        
+      }
+      .location-txt img{
+width: 5vw;
+      }
+      .location-box{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2.5vw;
+        padding-top: 1vw;
+        flex-direction: row-reverse;
+      }
+      .locationbox{
+    
+        width: 60%;
+        height: 100%;
+        margin-top: 3vw;
+      }
+      .locationbox-2{
+    
+        width: 40%;
+        height: 100%;
+      }
+      .locationbox-2 img{
+ margin-top: 1.5vw;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 3vw;
+        border-bottom-left-radius: 3vw;
+      }
+
+      .hitmovie{
+        width: 100%;
+        height: 50vw;
+       
+        display: flex;
+        
+      }
+      .hitmovie-box{
+        width: 35%;
+        height: 100%;
+       
+        background-image: url('img/jailer.jpg');
+        background-size: cover;
+      }
+      .hitmovie-box-2{
+        width: 65%;
+        height: 100%;
+       
+        background-color: #0c0f25;
+      }
+      .box-title{
+        width: 100%;
+        height: 10vw;
+     
+        display: flex;
+        align-items: center;
+        
+      }
+      .box-title h4{
+        color: white;
+        text-transform: uppercase;
+        padding-left: 3vw;
+font-size: 3vw;
+font-family: 'Poppins', sans-serif;
+letter-spacing: 0.1vw;
+      }
+      .box-title img{
+        margin-left: 25vw;
+width: 6.5vw;
+      }
+      .box-title p{
+        margin-top: 0.5vw;
+        color: white;
+        margin-left: 1.5vw;
+        font-size: 2.5vw;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: 600;
+      }
+      .date-box{
+        width: 100%;
+        height: 4vw;
+    
+      }
+      .date-box p{
+        padding-left: 3vw;
+        font-size: 2vw;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 0.1vw;
+        color: #c0c4e5a3;
+        font-weight: 600;
+      }
+      .content-box{
+        width: 100%;
+        height: 35vw;
+       
+      }
+      .content-box img{
+        width: 15vw;
+        margin-left: 3vw;
+    margin-top: 3vw;
+  
+      }
+      .drama{
+        width: 100%;
+        height: 6vw;
+       
+        display: flex;
+        align-items: center;
+        gap: 3vw;
+        padding: 2.5vw;
+        
+      }
+      .drama p{
+        width: 12vw;
+        height: 4vw;
+        border: 1px solid #c0c4e5a3;
+        font-size: 2vw;
+        color: #c0c4e5a3;
+        border-radius: 2vw;
+        padding: 0.5vw;
+        text-align: center;
+        font-family: 'Lora', serif;
+        letter-spacing: 0.1vw;
+      }
+      #content-p{
+        padding-left: 3vw;
+        font-size: 1.5vw;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 0.1vw;
+        color: #c0c4e5a3;
+        font-weight: 600;
       }
 }
