@@ -671,4 +671,51 @@ width: 6.5vw;
         font-size: 3vw;
         font-family: 'Lora', serif;
      }
+     .location-section{
+        margin-top: 5vw;
+        width: 100%;
+        height: 20vw;
+      
+        display: flex;
+      
+        padding: 2vw;
+     }
+     .loaction-box-1{
+        width: 24%;
+height: 100%;
+border-left: 1px solid rgba(160, 159, 159, 0.189);
+border-top: 1px solid rgba(160, 159, 159, 0.189);
+border-bottom: 1px solid rgba(160, 159, 159, 0.189);
+background-color: rgba(255, 192, 203, 0.26);
+border-top-left-radius: 4vw;
+border-bottom-left-radius: 4vw;
+
+    }
+    .loaction-box-1 img{
+        width: 15vw;
+        margin-left: 5vw;
+        padding: 1vw; 
+    }
+    .loaction-box-2{
+        border-top-right-radius: 4vw;
+border-bottom-right-radius: 4vw;
+        width: 76%;
+height: 100%;
+border-right: 1px solid rgba(160, 159, 159, 0.189);
+border-top: 1px solid rgba(160, 159, 159, 0.189);
+border-bottom: 1px solid rgba(160, 159, 159, 0.189);
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 3vw;
+    }
+    .loaction-box-2 p{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+      font-size: 3.5vw;
+      color: #0c0f25;
+      
+
+    }
 }
