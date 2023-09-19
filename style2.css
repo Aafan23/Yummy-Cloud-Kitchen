@@ -459,6 +459,7 @@ width: 20vw;
   justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin-top: 10vw;
       }
       .location-txt{
         width: 100%;
@@ -517,7 +518,7 @@ width: 5vw;
       .hitmovie{
         width: 100%;
         height: 50vw;
-       
+      
         display: flex;
         
       }
@@ -581,9 +582,9 @@ width: 6.5vw;
        
       }
       .content-box img{
-        width: 15vw;
+        width: 12vw;
         margin-left: 3vw;
-    margin-top: 3vw;
+    margin-top: 2vw;
   
       }
       .drama{
@@ -622,7 +623,7 @@ width: 6.5vw;
         margin-left: 7vw;
         color: #ffc107;
         padding: 2vw;
-        font-size: 2vw;
+        font-size: 1.5vw;
         border: 1.5px solid #ffc107;
         border-radius: 4vw;
         text-decoration: none;
@@ -630,4 +631,103 @@ width: 6.5vw;
         position: relative;
         top: 1vw;
       }
+      .section-2{
+        width: 100%;
+        height: 140vw;
+       
+      }
+      .section-2-header{
+        width: 100%;
+        height: 8vw;
+ 
+        display: flex;
+        align-items: center;
+        padding: 4vw;
+      
+      }
+      .section-2-header p{
+    
+        color: black;
+        font-size: 4vw;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.2vw;
+     
+      }
+      .section-2-box{
+        width: 100;
+        height: 100%;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 4vw;
+        padding-top: 0vw;
+      }
+     .section-2-movies-box{
+        width: 44vw;
+        height: 64vw;
+        border-radius: 2VW;
+        display: flex;
+        flex-direction: column;
+        
+     }
+     .section-2-movie-footer{
+        width: 100%;
+        height: 7vw;
+       border-radius: 2VW;
+        background-color: #E5E1E159;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     #movie-1{
+        background-image: url('img/images-1.jfif');
+        background-size: cover;
+        width: 100%;
+        height: 92%;
+        border-radius: 2VW;
+        margin-bottom: 1vw;
+     }
+     #movie-2{
+        background-image: url('img/images-2.jfif');
+        background-size: cover;
+        width: 100%;
+        height: 92%;
+        border-radius: 2VW;
+        margin-bottom: 1vw;
+     }
+     #movie-3{
+        background-image: url('img/images-3.jfif');
+        background-size: cover;
+        width: 100%;
+        height: 92%;
+        border-radius: 2VW;
+        margin-bottom: 1vw;
+     }
+     #movie-4{
+        background-image: url('img/images-4.jpg');
+        background-size: cover;
+        width: 100%;
+        height: 92%;
+        border-radius: 2VW;
+        margin-bottom: 1vw;
+     }
+     .footer-box-1{
+        width: 50%;
+        height: 100%;
+ 
+        padding: 3vw;
+        display: flex;
+        align-items: center;
+        gap: 1.5vw;
+     }
+     .footer-box-1 img{
+        width: 3.5vw;
+     }
+     .footer-box-1 p{
+        font-size: 3vw;
+        font-family: 'Lora', serif;
+     }
 }
