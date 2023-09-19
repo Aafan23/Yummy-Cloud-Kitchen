@@ -764,9 +764,9 @@ width: 32vw;
        color: gray;
             }
             .cinema{
-                margin-top: 3vw;
+                margin-top: 2vw;
                 width: 100%;
-                height: 35vw;
+                height: 40vw;
                 background-image: url('img/big-cinema.jpg');
                 background-size: cover;
                 background-position: center;
@@ -777,4 +777,33 @@ width: 32vw;
                 
               
             }
+            .cinema-name{
+                width: 100%;
+                height: 40vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2vw;
+                
+            }
+            .cinema-name img{
+                width: 12vw;
+                
+            }
+            .cinema-name h3{
+                font-size: 6vw;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 800;
+                color: #111431ed;
+            }
+            #shirwal{
+                font-size: 4vw;
+    font-family: 'Cookie', cursive;
+    position: relative;
+    right: 30vw;
+    top: 5vw;
+    color: #FF5757;
+    letter-spacing: 0.1vw;
+            }
+       
 }
