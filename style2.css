@@ -457,7 +457,7 @@ width: 20vw;
 
       .hitmovie{
         width: 100%;
-        height: 50vw;
+        height: 53vw;
       
         display: flex;
         
@@ -524,8 +524,8 @@ width: 6.5vw;
       }
       .content-box img{
         width: 12vw;
-        margin-left: 3vw;
-    margin-top: 2vw;
+        margin-left: 4vw;
+    margin-top: 4vw;
   
       }
       .drama{
@@ -570,7 +570,7 @@ width: 6.5vw;
         text-decoration: none;
         font-family: 'Poppins', sans-serif;
         position: relative;
-        top: 1vw;
+        top: 2vw;
       }
       .section-2{
         width: 100%;
@@ -718,4 +718,63 @@ padding: 3vw;
       
 
     }
+    .home-ticket-advertise{
+        width: 100%;
+        height: 60vw;
+ 
+        display: flex;
+    }
+    .advertise-box-1{
+        width: 50%;
+        height: 100%;
+      
+        background-image: url('img/Book-Ticket.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .advertise-box-2{
+        width: 50%;
+        height: 100%;
+  
+        padding: 4vw;
+     padding-top: 0vw;
+     padding-bottom: 5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+       
+    }
+    .advertise-box-2 h3{
+        text-align: center;
+        font-size: 4vw;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        color: #13183ded;
+       
+    }
+    .advertise-box-2 img{
+width: 32vw;
+    }
+    .advertise-box-2 p{
+        padding: 1vw;
+        text-align: center;
+       font-size: 2.5vw;
+       font-family: 'Lora', serif;
+       color: gray;
+            }
+            .cinema{
+                margin-top: 3vw;
+                width: 100%;
+                height: 35vw;
+                background-image: url('img/big-cinema.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+            .home-trailer{
+                width: 100%;
+                height: 50vw;
+                
+              
+            }
 }
